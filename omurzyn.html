@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ROBUX GENERATOR</title>
+  <meta name="description" content="Prawdziwy Robux Generator!! Oficialny od Roblox!! Tysiace opin dobrych!! Sprawdz." />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root {
+      --bg: #0b1220; --fg: #e5e7eb; --muted:#94a3b8; --primary:#60a5fa; --ok:#22c55e; --warn:#f59e0b; --err:#ef4444; --card:#0f172a; --border:#1f2937;
+    }
+    * { box-sizing: border-box; }
+    html, body { height:100%; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; background: radial-gradient(1200px 600px at 20% -10%, #12213d 0%, #0b1220 60%); color: var(--fg); }
+    .container { width:min(960px, 92%); margin:0 auto; padding:2rem 0 4rem; }
+    header { position: sticky; top:0; backdrop-filter: blur(8px) saturate(160%); background: rgba(10,17,32,.6); border-bottom:1px solid var(--border); z-index:20; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.85rem 0; }
+    .logo { display:inline-flex; align-items:center; gap:.6rem; font-weight:800; }
+    .logo i { width:28px; height:28px; border-radius:8px; background: var(--primary); box-shadow: 0 10px 30px -8px rgba(96,165,250,.45); display:inline-block; }
+    .badge { font-size:.8rem; color:#111827; background: linear-gradient(90deg, #fef08a, #fca5a5); padding:.25rem .5rem; border-radius:.5rem; font-weight:900; }
+
+    .card { background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); border:1px solid var(--border); border-radius:1.25rem; padding:1.25rem; box-shadow: 0 30px 80px -40px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.04); }
+    .grid { display:grid; gap:1rem; }
+    .hero { text-align:center; padding:2.5rem 0 1rem; }
+    .hero h1 { font-size:clamp(1.8rem, 4.2vw, 3rem); line-height:1.1; margin:.25rem 0 .5rem; }
+    .hero p { color: var(--muted); max-width:70ch; margin:.5rem auto 0; }
+
+    label { display:block; font-weight:700; margin:.5rem 0 .25rem; }
+    input { width:100%; padding:.8rem 1rem; border-radius:.9rem; border:1px solid var(--border); background:#0c1629; color:var(--fg); outline: none; box-shadow: inset 0 0 0 9999px rgba(255,255,255,0); }
+    input::placeholder { color:#6b7280; }
+    .row { display:grid; grid-template-columns: 1fr; gap:.8rem; }
+
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:.6rem; border:1px solid var(--border); background: var(--primary); color:#0b1220; padding:.8rem 1rem; border-radius:1rem; font-weight:800; cursor:pointer; box-shadow: 0 12px 30px -12px rgba(96,165,250,.6); transition: transform .06s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn.ghost { background:#0c1629; color: var(--fg); }
+    .btn[disabled] { opacity:.5; cursor:not-allowed; }
+
+    .step { display:none; }
+    .step.active { display:block; animation: fade .25s ease; }
+    @keyframes fade { from { opacity:.5; transform: translateY(4px);} to { opacity:1; transform:none; } }
+
+    .notice { background: rgba(253, 230, 138, .1); border:1px solid rgba(253, 230, 138, .35); color:#fde68a; padding:.75rem 1rem; border-radius:.9rem; font-weight:700; }
+    .warn { background: rgba(239, 68, 68, .08); border:1px solid rgba(239, 68, 68, .35); color:#fecaca; }
+
+    .progress-wrap { margin:1rem 0; background:#0c1629; border:1px solid var(--border); border-radius:999px; overflow:hidden; height:16px; }
+    .progress { height:100%; width:0%; background: linear-gradient(90deg, #93c5fd, #60a5fa 50%, #38bdf8); transition: width .1s linear; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace; }
+
+    .scam-info { margin-top:1rem; display:none; }
+    .scam-info.active { display:block; }
+    ul.checklist { margin:.5rem 0 0 1.25rem; }
+    footer { margin-top:3rem; color:#94a3b8; font-size:.9rem; text-align:center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo"><i></i><span>ROBUX GENERATOR</span></div>
+      <span class="badge"> OSTATNIA OPINIA: 5/5 , DODANE ROBUXY: 100K, LOKALIZACJA: JAROSLAW, POLSKA</span>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <p class="notice warn">UWAGA: Podaj PRAWDZIWE dane abyśmy mogli dodać darmowe Robuxy! Tylko jedno użycie na adres IP więc lepiej myśl!</h1>
+      </div>
+    </section>
+
+    <!-- KROK 1: pseudo-logowanie (tylko do symulacji) -->
+    <p class="notice warn">Witamy w GENERATORZE ROBUXÓW!</h1>
+    <section id="step-1" class="step active card">
+      <h2>Krok 1/3 — Podaj dane, aby dodać robuxy</h2>
+      <div class="row">
+        <label for="username">Nazwa użytkownika:</label>
+        <input id="username" name="username" placeholder="np. test_user123" autocomplete="off" />
+
+        <label for="password">Hasło:</label>
+        <input id="password" name="password" type="password" placeholder="np. abc123!" autocomplete="off" />
+      </div>
+      <div style="margin-top:1rem; display:flex; gap:.5rem;">
+        <button id="to-step-2" class="btn">Dalej →</button>
+        <button id="clear-1" class="btn ghost" type="button">Wyczyść</button>
+      </div>
+      <p id="err-1" class="notice warn" style="display:none; margin-top:1rem;">Podaj dane aby przejśc Dalej.</p>
+    </section>
+
+    <!-- KROK 2: ilość robuxów -->
+    <section id="step-2" class="step card">
+      <h2>Krok 2/3 — Ile chcesz Robuxów?</h2>
+      <div class="row">
+        <label for="amount">Wpisz liczbę (1–1 000 000):</label>
+        <input id="amount" name="amount" type="number" inputmode="numeric" min="1" max="1000000" placeholder="10000" />
+      </div>
+      <div style="margin-top:1rem; display:flex; gap:.5rem;">
+        <button id="to-step-3" class="btn">Dalej →</button>
+        <button id="back-1" class="btn ghost" type="button">← Wróć</button>
+      </div>
+      <p id="err-2" class="notice warn" style="display:none; margin-top:1rem;">Podaj poprawną liczbę z zakresu 1–1 000 000.</p>
+    </section>
+
+    <!-- KROK 3: pseudo-proces + postęp -->
+    <section id="step-3" class="step card">
+      <h2 id="processing-title">Krok 3/3 — Dodaję <span class="mono" id="x-amount">X</span> robuxów…</h2>
+      <div class="progress-wrap" aria-label="Postęp">
+        <div id="progress" class="progress" style="width:1%"></div>
+      </div>
+      <p class="mono" id="percent">1%</p>
+      <p id="status-line" class="notice" style="margin-top:.5rem;">Łączenie z serwerem…</p>
+      <div style="margin-top:1rem; display:flex; gap:.5rem;">
+        <button id="restart" class="btn ghost" type="button" disabled>Uruchom ponownie</button>
+      </div>
+
+      <div id="success" class="scam-info">
+        <h3 class="mono">✅ Pomyślnie dodano <span id="x-amount-success">X</span> robuxów!!!!</h3>
+        <div class="card" style="margin-top:.75rem;">
+          <div style="margin-top:1rem; display:flex; gap:.5rem;">
+            <button class="btn" id="again">Zobacz jeszcze raz</button>
+            <button class="btn ghost" id="toggle-raw">Pokaż zapis kroków (lokalnie)</button>
+          </div>
+          <pre id="raw-log" class="mono" style="display:none; margin-top:.75rem; white-space:pre-wrap; background:#0c1629; padding:1rem; border-radius:.75rem; border:1px solid var(--border);"></pre>
+        </div>
+      </div>
+    </section>
+
+
+  <script>
+    // Stan tylko w pamięci (nic nie jest zapisywane ani wysyłane)
+    let state = { username: "", fakePassword: "", amount: 0, log: [] };
+
+    // Pomocnicze
+    const qs = (sel) => document.querySelector(sel);
+    const show = (id) => { document.querySelectorAll('.step').forEach(s => s.classList.remove('active')); qs(id).classList.add('active'); };
+    const addLog = (msg) => { const ts = new Date().toLocaleTimeString(); state.log.push(`[${ts}] ${msg}`); };
+
+    // KROK 1
+    qs('#clear-1').addEventListener('click', () => { qs('#username').value = ''; qs('#password').value = ''; qs('#err-1').style.display='none'; });
+    qs('#to-step-2').addEventListener('click', () => {
+      const u = qs('#username').value.trim();
+      const p = qs('#password').value.trim();
+      if (!u || !p) { qs('#err-1').style.display='block'; return; }
+      state.username = u; state.fakePassword = p; addLog(`Podano dane: user="${u}", hasło=[ukryte]`);
+      show('#step-2');
+    });
+
+    // KROK 2
+    qs('#back-1').addEventListener('click', () => show('#step-1'));
+    qs('#to-step-3').addEventListener('click', () => {
+      const raw = qs('#amount').value;
+      const n = Number(raw);
+      if (!Number.isInteger(n) || n < 1 || n > 1_000_000) { qs('#err-2').style.display='block'; return; }
+      state.amount = n; addLog(`Zażądano ${n} robuxów.`);
+      qs('#x-amount').textContent = n.toLocaleString('pl-PL');
+      show('#step-3');
+      startFakeProcess();
+    });
+
+    // KROK 3 — pseudo-proces
+    function startFakeProcess(){
+      const progressEl = qs('#progress');
+      const percentEl = qs('#percent');
+      const titleEl = qs('#processing-title');
+      const statusEl = qs('#status-line');
+      const restartBtn = qs('#restart');
+      const successBox = qs('#success');
+      const amountStr = state.amount.toLocaleString('pl-PL');
+
+      let i = 1;
+      percentEl.textContent = '1%';
+      progressEl.style.width = '1%';
+      statusEl.textContent = 'łączenie z bazą danych…';
+      restartBtn.disabled = true;
+      successBox.classList.remove('active');
+
+      addLog('Start sekwencji dodawania robuxów…');
+
+      const timer = setInterval(() => {
+        i++;
+        if (i <= 100) {
+          progressEl.style.width = i + '%';
+          percentEl.textContent = i + '%';
+          // Losowe, dramatyczne statusy jak na scamach
+          if (i === 15) statusEl.textContent = 'Generowanie tokenu…';
+          if (i === 35) statusEl.textContent = 'Weryfikacja serwera…';
+          if (i === 55) statusEl.textContent = 'Szyfrowanie połączenia…';
+          if (i === 75) statusEl.textContent = 'Aktualizacja bazy…';
+          if (i === 90) statusEl.textContent = 'Finalizowanie…';
+        }
+        if (i >= 100) {
+          clearInterval(timer);
+          titleEl.innerHTML = `Krok 3/3 — Dodaję <span class="mono" id="x-amount">${amountStr}</span> robuxów…`;
+          percentEl.textContent = '100%';
+          progressEl.style.width = '100%';
+          statusEl.textContent = 'Zakończono.';
+          restartBtn.disabled = false;
+
+          // Wynik + sekcja edukacyjna
+          qs('#x-amount-success').textContent = amountStr;
+          successBox.classList.add('active');
+          addLog(`Zakończono. Wyświetlam komunikat „Pomyślnie dodano ${amountStr} robuxów!!!!”.`);
+        }
+      }, 35); // szybkość licznika
+
+      restartBtn.onclick = () => { show('#step-1'); };
+    }
+
+    // Pokaz/ukryj „log” kroków (dla nauczyciela/osoby pokazującej)
+    qs('#toggle-raw').addEventListener('click', () => {
+      const box = qs('#raw-log');
+      if (box.style.display === 'none') {
+        box.textContent = state.log.join('\n');
+        box.style.display = 'block';
+      } else {
+        box.style.display = 'none';
+      }
+    });
+
+    qs('#again').addEventListener('click', () => { state.log = []; show('#step-1'); });
+  </script>
+</body>
+</html>
